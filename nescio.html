@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--
+	Synchronous by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Nescio project</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+		<div id="wrapper">
+			
+			<!-- Header -->
+			<div id="header">
+				<div class="container"> 
+					
+					<!-- Logo -->
+					<div id="logo">
+						<h1><a href="#">Nescio project</a></h1>
+						<span>Description and anonymization of Binary Data Formats</span>
+					</div>
+					
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Homepage</a></li>
+				            <li><a href="bird.html">Bird</a></li>
+                            <li class="active"><a href="nescio.html">Nescio</a></li>
+                            <li><a href="usecases.html">Use cases</a></li>
+							<li><a href="examples.html">Example</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- /Header -->
+			
+			<div id="page">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+							<section id="content" >
+								<header>
+									<h2>Nescio</h2>
+								</header>
+                                <p>
+                                With Nescio we can declaritively specify anonymization rules for any data definition language for which a Nescio "bridge" has been developed. How do Nescio anonymization rules look like?
+                                </p>
+                                <p>
+                                    <img width="40%" src="images/nescio-rules.png" />
+                                </p>
+								
+                                <p>See how the anonymizing transformations are mapped to a Java method in order to support sophisticatd behavior. Also, notice the agnostic way of declaring the traversal to the portions of the data that will be anonymized. These patterns resemble XPath-like adressing, but not tied to a particular data definition language.</p>
+                                <p>In fact, in the header of a nescio file one needs to specify in which language the data is described (needless to say, provided that a bridge therefor has been developed). In this case, we assume the data will be parsed using a Bird specification, that we need to import. Check the header of the Nescio module that contains the rule <strong><font color="#660066">anonymizeDestAddress</font></strong>:</p>
+                                
+                                 <p>
+                                    <img width="23%" src="images/nescio-header.png" />
+                                </p>
+                                
+                               <header>
+                                    <strong>Architecture</strong>
+                                </header>
+                                
+                                <p>The Nescio DSL was designed in order to be integrated with an open-ended set of data description formats. The next diagrams show what are the components that need to be provided in order to allow one particular data description language "x" to generate anonymizers based on Nescio descriptions.</p>
+                                
+                                <header>
+                                    <strong><font color="lightblue">Pluggable architecture of Nescio type checker</font></strong>
+                                </header>
+                                <p>
+                                    <img width="40%" src="images/nescio-plugin-diagram.png" />
+                                </p>
+                                
+                                <header>
+                                     <strong><font color="lightblue">Pluggable architecture of Nescio generation of anonymizers
+                                         </font></strong>
+                                </header>
+                                <p>
+                                    <img width="60%" src="images/nescio-generator-diagram.png"/>
+                                </p>
+
+                                
+							</section>
+						</div>
+					</div>
+
+				</div>	
+            </div>
+
+			
+			<!-- Copyright -->
+			<div id="copyright">
+				<div class="container">
+					Design: <a href="http://templated.co">TEMPLATED</a> 
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
