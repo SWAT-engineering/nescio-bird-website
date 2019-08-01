@@ -5,6 +5,10 @@ pages:
   - mkdir .public # . files/folders are ignored by cp by default
   - cp -r * .public
   - mv .public public
+  - rm public/bird-nescio-update-site.zip # remove extra zip copy
+  - apk add unzip
+  - mkdir -p public/update-site/ # start unpacking the updatesite
+  - unzip bird-nescio-update-site.zip -d public/update-site/
   artifacts:
     paths:
     - public
