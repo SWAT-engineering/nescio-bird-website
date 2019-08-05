@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Synchronous by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Nescio project</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="/js/html5shiv.js"></script><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/skel-panels.min.js"></script>
+		<script src="/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="/css/skel-noscript.css" />
+			<link rel="stylesheet" href="/css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+		<div id="wrapper">
+			
+			<!-- Header -->
+			<div id="header">
+				<div class="container"> 
+					
+					<!-- Logo -->
+					<div id="logo">
+						<h1><a href="#">Nescio project</a></h1>
+						<span>Description and anonymization of Binary Data Formats</span>
+					</div>
+					
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Homepage</a></li>
+				            <li><a href="bird.html">Bird</a></li>
+                            <li><a href="nescio.html">Nescio</a></li>
+                            <li><a href="usecases.html">Use cases</a></li>
+							<li><a href="examples.html">Example</a></li>
+                            <li class="active"><a href="installing.html">Installing</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- /Header -->
+			
+			<div id="page">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+							<section id="content" >
+								<header>
+									<h2>Installing the Bird/Nescio IDE</h2>
+								</header>
+                                <p>The Bird/Nescio IDE is based on Eclipse and the <a href="http://www.rascal-mpl.org/">Rascal Language</a>. These are the steps to install it and create a new Bird/Nescio project:</p>
+                                <p><span>1.</span>&nbsp;Download Eclipse IDE for RCP and RAP Developers, available at <a href="www.eclipse.org/downloads/packages/">www.eclipse.org/downloads/packages/</a><br/>
+                                <span>2.</span>&nbsp;Once in the Eclipse IDE, go to the menu Help -> Install New Software...<br/>
+                                <span>3.</span>&nbsp;On the "Install" dialog, select "Add..."<br/>
+                                <span>4.</span>&nbsp;On the "Add Repository" dialog, select "Archive..." and then select the file downloaded in step 2. The "Location" text box will contain the local address of the file. Click on the button "Add".<br/>
+                                <span>5.</span>&nbsp;Back on the "Install" dialog, you can see that there is a new item called "Bird/Nescio DSLs" next to a checkbox. Check it and press "Next>".<br/>
+                                <span>6.</span>&nbsp;The Install Details of the selected component are displayed. Press "Next>".<br/>
+                                <span>7.</span>&nbsp;The license details for the selected component are displayed. Accept the terms and press "Finish". The plugin will start its installation. At some point, a security warning dialog will be presented. Click on the "Install anyway" button.<br/>
+                                <span>8.</span>&nbsp;A dialog soliciting the restart of Eclipse is presented. Click on "Restart Now". After the restart, the Eclipse Bird/Nescio IDE is succesfully installed.
+                                </p>
+
+                                <header>
+									<strong>Creating a blank project on the Bird/Nescio IDE</strong>
+								</header>
+                                <p>Once the Bird/Nescio IDE is installed, these are the steps to create a new project and the associated files:</p>
+                                <p><span>1.</span>&nbsp;Go to the menu File -> New -> Project...<br/>
+                                <span>2.</span>&nbsp;On the "New Project" dialog, select "Bird/Nescio - Bird/Nescio Project" and press "Next>"<br/>
+                                <span>3.</span>&nbsp;Name the project and press "Finish".<br/>
+                                <span>4.</span>&nbsp;The new project direct structure is ready and displayed on the IDE. Notice there is an "src" folder. Both the Bird descriptions (format .bird) and the Nescio specifications (format .nescio) must be put there, if not physically, via a symlink. there is also a "generated" folder. There inside will be both the Java parsers generated by the Bird descriptions, and the Java anonymizers generated by the Nescio specifications.<br/>
+                                <span>5.</span>&nbsp;Configure the details about the docker image on file META-INF/RASCAL.MF, in particular, the base Java package for all the generated code (BasePackage).<br/>
+                                <span>6.</span>&nbsp;To start the development of an Bird/Nescio module, right click on the project root folder and select the menu New -> Other...<br/>
+                                <span>7.</span>&nbsp;a) To develop a Bird specification: On the "New" dialog, select "Bird/Nescio - Bird Module" and press "Next>". (b) To develop a Nescio specification: On the "New" dialog, select "Bird/Nescio - Nescio Module" and press "Next>".<br/>
+                                <span>8.</span>&nbsp;Name the module and press "Finish".<br/>
+                                <span>9.</span>&nbsp;The new module file (extension .bird or .nescio) is created in folder "generated" and its content is displayed. Notice that it already contains a simple specification as a template.<br/>
+                                <span>10.</span>&nbsp;Each time a Bird module is saved, a new Java file containing a parser for such specification is generated on the "generated" folder.<br/>
+                                <span>11.</span>&nbsp;Each time a Nescio module is saved, a new Java file containing the anonymizer based on such specification is generated on the "generated" folder. The parsers for the bird files that this Nescio files import must be generated for this anonymizer to succesfully compile.
+                                </p>
+
+                                
+                                
+							</section>
+						</div>
+					</div>
+
+				</div>	
+            </div>
+
+			
+			<!-- Copyright -->
+			<div id="copyright">
+				<div class="container">
+					Design: <a href="http://templated.co">TEMPLATED</a> 
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
